@@ -25,10 +25,10 @@ export default function NewCategory() {
             <p className="mt-4 text-sm leading-7 text-gray-500 font-regular uppercase">
               Nouvelle Catégorie
             </p>
-            <h3 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
-              Créer un nouveau{" "}
-              <span className="text-indigo-600">Catégorie</span>
-            </h3>
+            <h4 className="text-3xl sm:text-4xl leading-normal font-extrabold tracking-tight text-gray-900">
+              Créer une nouvelle{" "}
+              <span className="text-indigo-400">Catégorie</span>
+            </h4>
           </div>
           <Formik
             initialValues={{ name: "", description: "", image: "" }}
@@ -128,7 +128,7 @@ export default function NewCategory() {
                       className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
                       htmlFor="image"
                     >
-                      Upload une image
+                    image
                     </label>
                     <input
                       ref={inputRef}
@@ -157,7 +157,10 @@ export default function NewCategory() {
                         {formik.errors.image}
                       </div>
                     ) : null}
+
+                  <div className="text-red-500 mb-6 text-xs "> .png , .jpg , .jpeg</div>
                   </div>
+                  
                 </div>
                 <div className="flex flex-wrap -mx-3 mb-6">
                   <div className="w-full px-3">
