@@ -201,7 +201,7 @@ const Categories = () => {
     }
 
     const projetBodyTemplate = (rowData) => {
-        return <span>{rowData.projets || "Empty!"}</span>
+        return <span>{rowData.projets || 0 }</span>
     }
 
     const filterApplyTemplate = (options) => {
