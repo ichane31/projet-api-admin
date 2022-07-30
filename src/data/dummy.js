@@ -52,22 +52,7 @@ export const links = [{
             }
         ]
     },
-    {
-        title: 'Projets',
-        links: [{
-                name: 'Gerer les Projets',
-                url: 'Projets',
-                icon: < AiFillProject / > ,
-            },
-            {
-                name: 'Nouveux Projets',
-                url: 'NewProjet',
-                icon: < BsPlusLg / > ,
-            },
-        ],
-    },
-
-
+    
 
 ];
 
