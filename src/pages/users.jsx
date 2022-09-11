@@ -232,9 +232,9 @@ const Users = () => {
         return  <span>{formatDate(new Date(rowData.active))}</span>
     }
 
-    const MFABodyTemplate = (rowData) => {
-        return  <span>{rowData.MFA}</span>
-    }
+    // const MFABodyTemplate = (rowData) => {
+    //     return  <span>{rowData.MFA}</span>
+    // }
 
     const statusFilterTemplate = (options) => {
         return <Dropdown value={options.value} options={statuses} onChange={(e) => options.filterCallback(e.value, options.index)} itemTemplate={statusItemTemplate} placeholder="Sélectionnez un statut" className="p-column-filter"/>;
@@ -328,7 +328,7 @@ const Users = () => {
                             filterClear={filterClearTemplate} filterApply={filterApplyTemplate}></Column>
                         <Column field="status" header="Status" body={statusBodyTemplate} filterMenuStyle={{boxShadow:'0px 1px 6px rgb(180, 178, 178)', width: '14rem' }} 
                             style={{ minWidth: '0rem' }} filter filterElement={statusFilterTemplate}></Column>
-                        <Column field="MFA" header="MFA" body={MFABodyTemplate}  style={{ minWidth: '0rem' }}></Column>
+                        {/* <Column field="MFA" header="MFA" body={MFABodyTemplate}  style={{ minWidth: '0rem' }}></Column> */}
                         <Column field="active" header="Active" body={activeBodyTemplate}  style={{ minWidth: '13rem' }}></Column>
                         <Column field="createdAt" header="Date de creation" dataType="date" body={dateBodyTemplate} style={{ minWidth: '13rem' }}></Column>
                         <Column body={actionBodyTemplate} exportable={false} style={{ minWidth: '8rem' }}></Column>

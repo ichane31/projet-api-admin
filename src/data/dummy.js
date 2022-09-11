@@ -39,14 +39,14 @@ export const links = [{
     },
 
     {
-        title: 'Categorie des Cours',
+        title: 'Categorie des Projets',
         links: [{
                 name: 'Gerer les Categories',
                 url: 'Categories',
                 icon: < BiCategory / > ,
             },
             {
-                name: 'Nouveux Categories',
+                name: 'Nouvelle Categorie',
                 url: 'NewCategorie',
                 icon: < BsPlusLg / > ,
             }

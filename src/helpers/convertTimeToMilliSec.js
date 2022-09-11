@@ -15,16 +15,18 @@ export const findIdCategory = (name, categories) => {
     if(_category.length) return _category[0].id
 }
 
-export const findIdCourse = (name, courses) => {
-    const _course =  courses.filter(item => (
-        item.name === name
-    ));
-    if(_course.length) return _course[0].id
-}
+export const getItemFromStorage = (key) => {
+    const item = window.localStorage.getItem(key);
+    if (item === undefined){
+       return null;
+    }
+       return  JSON.parse(item)
+};
 
-export  const findIdChapiter = (name, chapiters) => {
-    const _chapiter =  chapiters.filter(item => (
-        item.name === name
-    ));
-    if(_chapiter.length) return _chapiter[0].id
-}
+export const setItemInStorage = (name, data) => {
+    window.localStorage.setItem(name, JSON.stringify(data));
+};
+
+export const removeItemFromStorage = (name) => {
+    window.localStorage.removeItem(name);
+};
